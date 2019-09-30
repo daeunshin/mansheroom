@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Mansheroom_home</title>
+	<link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.0/normalize.css">
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700i&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700,900&display=swap" rel="stylesheet">
+
+	<style>
+	/*폰트*/
+		h1{font-family: 'Roboto Condensed', sans-serif; font-size: 5em; line-height: 0; letter-spacing: -2px;}
+		*{font-family: 'Noto Sans KR', sans-serif;}
+		html{font-family: 'Noto Sans KR', sans-serif;}
+	/*메뉴바*/
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding-left: 5px;
+			padding-top: 15px;
+			padding-bottom: 7px;
+			overflow: hidden;
+			background: white;
+			position: fixed;
+			width: 100%;
+			top: 0;
+			z-index: 990;
+			opacity: 0.85;
+		}
+		li {
+			float: left;
+		}
+		li a {
+			display: block;
+			color: black;
+			text-align:center;
+			padding:1px;
+			padding-bottom: 5px;
+			margin: 10px 18px;
+			text-decoration: none;
+			font-weight: 400;
+			font-size: 1.1em;
+		}
+		li a:hover:not(.active) {
+			border-bottom: 2px solid;
+			font-weight: 500;
+		}
+		li a.active {
+			border-bottom: 2px solid;
+			font-weight: 500;
+			color: black;
+		}
+		#logo{
+			-webkit-text-stroke:1px black; color: white;
+			font-size: 2.2em;
+			font-weight: 700;
+			width: 200px;
+			margin-top: 0;
+			position: absolute;
+			left:calc(50% - 130px);
+		}
+	/*top button*/
+		#myBtn {
+		display: none; /* Hidden by default */
+		position: fixed; /* Fixed/sticky position */
+		bottom: 20px; /* Place the button at the bottom of the page */
+		right: 15px; /* Place the button 30px from the right */
+		z-index: 999; /* Make sure it does not overlap */
+		border: none; /* Remove borders */
+		outline: none; /* Remove outline */
+		cursor: pointer; /* Add a mouse pointer on hover */
+		background: none;
+		width: 70px;
+		}
+		#myBtn img{width: 100%;}
+
+	/*본문*/
+		#mainpage{
+			position: relative; margin-top: 130px;
+			width: 1400px; left:calc(50% - 700px); 
+			overflow: auto;
+			padding-left: 0px;
+			padding-right: 0px;
+			padding-bottom: 200px;
+		}
+		.mainbox1{
+			position: relative; 
+			width: 280px; height: 530px; 
+			margin: 19px; padding: 15px;
+			margin-bottom: 60px;
+			border-radius: 20px;
+			background: white;
+			float: left;
+			border:1px solid #efefef;
+			transition: all 0.5s;
+			text-decoration: none;
+		}
+		.mainbox1:hover {background: #efefef;}
+			.under{ top: 60px; }
+
+		.mainbox1 img{
+			position: relative; width: 100%;
+		}
+
+
+		
+		.mantextbox{position: relative; margin: auto; }
+			.mantext1{margin-top: 15px; margin-bottom: 7px;
+				font-size: 1.2em; font-family: 'Noto Sans KR', sans-serif; font-weight: 500; text-align: center; color: black;}
+			.mantext2{margin-top: 0px; font-size: 1em; font-family: 'Noto Sans KR', sans-serif; font-weight: 400; text-align: center; line-height: 1.7em;color: black;
+		}
+
+	/*푸터*/
+		footer {
+			background: black; 
+			color: #e2e2e2;
+			height: 300px;
+			position: relative;
+			width: 100%;
+			padding-top: 20px;
+			margin-top: 100px;
+		}
+		#footerbox{
+			position: relative; 
+			width: 1350px; left:calc(50% - 675px);
+
+		}
+			
+			#footerLogo{
+				-webkit-text-stroke:1px white; color: black;
+				font-size: 2.2em;
+				font-weight: 700;
+				width: 200px; 
+				margin-top: 30px;
+				position: absolute;
+				left: 10px;
+			}
+			#footerLeft{
+				position: absolute; width: 300px; left: 15px;
+				margin-top: 100px;
+				line-height: 1.7em;
+			}
+			#footerRight{
+				position: absolute; width: 880px; right: 15px;
+				margin-top: 100px;
+				line-height: 1.7em;
+			}
+
+	</style>
+</head>
+
+<body>
+	<header>
+		
+	</header>
+<!-- 메뉴바 -->
+	<ul>
+		<li><a class="active" href="#">버섯도감</a></li>
+		<li><a href="링크복붙">알아보기</a></li>
+		<li><a href="링크복붙">About</a></li>
+		<li><a id="logo">머스마룸</a></li>
+	</ul>
+<!-- Top Button -->
+	<button onclick="topFunction()" id="myBtn" title="Go to top">
+		<img id="arrow" src="./homeimg/arrowGray.png">
+	</button>
+	<script type="text/javascript">
+			var y= document.querySelector("#arrow")
+			y.onmouseover = function(e){
+				y.setAttribute("src","./homeimg/arrow.png")
+			}
+			y.onmouseleave = function(e){
+				y.setAttribute("src","./homeimg/arrowGray.png")
+			}
+		</script>
+<!-- 본문 -->
+	<section id="mainpage">
+		<a class="mainbox1" href="1.html">
+			<h1 style="color: #430084;">01</h1>
+			<img src="./img/ba01.png" class="manimg" id="a01">
+			<div class="mantextbox">
+				<p class="mantext1">
+					어린로리버섯
+				</p>
+				<p class="mantext2">
+					로리콘이 아니라 이건 그냥 사랑일 뿐이야. 일종의 성취향이지
+				</p>
+			</div>
+		</a>
+		
+		<a class="mainbox1 under" href="#">
+			<h1 style="color: #a00000;">02</h1>
+			<img src="./img/ba02.png" class="manimg" id="a02">
+			<div class="mantextbox">
+				<p class="mantext1">
+					페미사이드버섯
+				</p>
+				<p class="mantext2">
+					여자들이 나를 먼저 무시했어. <br>
+					죽이려면 여자가 편하겠지
+				</p>
+			</div>
+		</a>
+
+		<a class="mainbox1" href="#">
+			<h1 style="color: #5e0024;">03</h1>
+			<img src="./img/ba03.png" class="manimg" id="a03">
+			<div class="mantextbox">
+				<p class="mantext1">
+					버닝썬버섯
+				</p>
+				<p class="mantext2">
+					이거 한 잔 마실래?
+				</p>
+			</div>
+		</a>
+
+		<a class="mainbox1 under" href="#">
+			<h1 style="color: #100082;">04</h1>
+			<img src="./img/ba04.png" class="manimg" id="a04">
+			<div class="mantextbox">
+				<p class="mantext1">
+					노콘버섯
+				</p>
+				<p class="mantext2">
+					콘돔없이 하자. <br>
+					불안하면 약먹으면 되잖아
+				</p>
+			</div>
+		</a>
+
+		<a class="mainbox1" href="#">
+			<h1 style="color: #4c7275;">05</h1>
+			<img src="./img/ba05.png" class="manimg" id="a05">
+			<div class="mantextbox">
+				<p class="mantext1">
+					오빠가버섯
+				</p>
+				<p class="mantext2">
+					주말에 뭐해? 오빠가 밥사줄까?
+				</p>
+			</div>
+		</a>
+
+		<a class="mainbox1 under" href="#">
+			<h1 style="color: #;">06</h1>
+			<img src="./img/ba06.png" class="manimg"  id="a06">
+			<div class="mantextbox">
+				<p class="mantext1">
+					리벤지포르노버섯
+				</p>
+				<p class="mantext2">
+					너 몰래 2년동안 몰카 100기가 <br>
+					넘게 찍었다. 넌X됐어~
+				</p>
+			</div>
+		</a>
+
+		<a class="mainbox1" href="#">
+			<h1 style="color: #;">07</h1>
+			<img src="./img/ba07.png" class="manimg" id="a07">
+			<div class="mantextbox">
+				<p class="mantext1">
+					몰래찰칵버섯
+				</p>
+				<p class="mantext2">
+					클럽 화장실 만취녀jpg <br>
+					반응좋으면 영상 올려요!
+				</p>
+			</div>
+		</a>
+		<a class="mainbox1 under" href="#">
+			<h1 style="color: #;">08</h1>
+			<img src="./img/ba08.png" class="manimg" id="a08">
+			<div class="mantextbox">
+				<p class="mantext1">
+					몰카소비버섯
+				</p>
+				<p class="mantext2">
+					내가 찍은것도 아닌데 뭐? 난 유포자도 아니야. 그리고 너랑 상관없는 사람이잖아
+				</p>
+			</div>
+		</a>
+
+		<a class="mainbox1" href="#">
+			<h1 style="color: #1b0035;">09</h1>
+			<img src="./img/ba09.png" class="manimg" id="a09">
+			<div class="mantextbox">
+				<p class="mantext1">
+					코르셋버섯
+				</p>
+				<p class="mantext2">
+					여자애가 얼굴이 그게 뭐냐? 뭐좀 찍어 발라라. 여자가 화장은 예의지
+				</p>
+			</div>
+		</a>
+		<a class="mainbox1 under" href="#">
+			<h1 style="color: #922938;">10</h1>
+			<img src="./img/ba10.png" class="manimg" id="a10">
+			<div class="mantextbox">
+				<p class="mantext1">
+					성매매버섯
+				</p>
+				<p class="mantext2">
+					오늘 예약 되나요?
+				</p>
+			</div>
+		</a>
+
+		<a class="mainbox1" href="#">
+			<h1 style="color: #00002d;">11</h1>
+			<img src="./img/ba11.png" class="manimg" id="a11">
+			<div class="mantextbox">
+				<p class="mantext1">
+					댄싱카르텔버섯
+				</p>
+				<p class="mantext2">
+					오늘 물 좋아요. <br>
+					지금 A급 애들로 세팅 가능합니다. 
+				</p>
+			</div>
+		</a>
+
+		<a class="mainbox1 under" href="#">
+			<h1 style="color: #18310e;">12</h1>
+			<img src="./img/ba12.png" class="manimg" id="a12">
+			<div class="mantextbox">
+				<p class="mantext1">
+					강약약강버섯
+				</p>
+				<p class="mantext2">
+					아씨 어디 여자가.. <br>
+					아유 옆에 남자친구분이 계셨네~
+				</p>
+			</div>
+		</a>
+
+		<a class="mainbox1" href="#">
+			<h1 style="color: #565934;">13</h1>
+			<img src="./img/ba13.png" class="manimg" id="a13">
+			<div class="mantextbox">
+				<p class="mantext1">
+					가정폭력버섯
+				</p>
+				<p class="mantext2">
+					너 같은 애는 맞아야해. <br>
+					집에서 밥이나 축내는게
+				</p>
+			</div>
+		</a>
+
+		<a class="mainbox1 under" href="#">
+			<h1 style="color: #000099;">14</h1>
+			<img src="./img/ba14.png" class="manimg" id="a14">
+			<div class="mantextbox">
+				<p class="mantext1">
+					노란평가버섯
+				</p>
+				<p class="mantext2">
+					우리과에선 아영이가 제일 예쁘지. <br>
+					세아는 예쁘긴 한데 다리가 좀..
+				</p>
+			</div>
+		</a>
+
+		<a class="mainbox1" href="#">
+			<h1 style="color: #1e5100;">15</h1>
+			<img src="./img/ba15.png" class="manimg" id="a15">
+			<div class="mantextbox">
+				<p class="mantext1">
+					납작스토킹버섯
+				</p>
+				<p class="mantext2">
+					점심시간에 옆에있던 그남자 누구야?
+				</p>
+			</div>
+		</a>
+
+		<a class="mainbox1 under" href="#">
+			<h1 style="color: #13597c;">16</h1>
+			<img src="./img/ba16.png" class="manimg" id="a16">
+			<div class="mantextbox">
+				<p class="mantext1">
+					야동버섯
+				</p>
+				<p class="mantext2">
+					걔가 야동 안본다고 했다고?<br>
+					야 그거 백퍼 거짓말이다
+				</p>
+			</div>
+		</a>
+
+		<a class="mainbox1" href="#">
+			<h1 style="color: #3a2e2b;">17</h1>
+			<img src="./img/ba17.png" class="manimg" id="a17">
+			<div class="mantextbox">
+				<p class="mantext1">
+					여자가버섯
+				</p>
+				<p class="mantext2">
+					어디 여자가 조신하지 못하게 큰소리야!<br>
+					집구석에서 밥이나 해!
+				</p>
+			</div>
+		</a>
+
+		<a class="mainbox1 under" href="#">
+			<h1 style="color: #873c2d;">18</h1>
+			<img src="./img/ba18.png" class="manimg" id="a18">
+			<div class="mantextbox">
+				<p class="mantext1">
+					데이트폭력버섯
+				</p>
+				<p class="mantext2">
+					너같은애 나나 만나주지 너같이 멍청하고 뚱뚱한애 누가 만나주냐?
+				</p>
+			</div>
+		</a>
+
+		<a class="mainbox1" href="#">
+			<h1 style="color: #397e8e;">19</h1>
+			<img src="./img/ba19.png" class="manimg" id="a19">
+			<div class="mantextbox">
+				<p class="mantext1">
+					펜스룰버섯
+				</p>
+				<p class="mantext2">
+					어후 나는 여혐 안해. <br>나는 여직원들하고는 밥도 같이 <br>안먹는다니까?
+				</p>
+			</div>
+		</a>
+
+		<a class="mainbox1 under" href="#">
+			<h1 style="color: #756956;">20</h1>
+			<img src="./img/ba20.png" class="manimg" id="a20">
+			<div class="mantextbox">
+				<p class="mantext1">
+					꽃제비버섯
+				</p>
+				<p class="mantext2">
+					급하게 권리금이 필요한데 <br>
+					2천만 빌려줄 수 있어?
+				</p>
+			</div>
+		</a>
+
+		<a class="mainbox1" href="#">
+			<h1 style="color: #3a6882;">21</h1>
+			<img src="./img/ba21.png" class="manimg" id="a21">
+			<div class="mantextbox">
+				<p class="mantext1">
+					침묵버섯
+				</p>
+				<p class="mantext2">
+					근데 이건 양쪽 얘기 다 들어봐야 <br> 하는거 아닌가? 
+				</p>
+			</div>
+		</a>
+
+		<a class="mainbox1 under" href="#">
+			<h1 style="color: #230084;">22</h1>
+			<img src="./img/ba22.png" class="manimg" id="a22">
+			<div class="mantextbox">
+				<p class="mantext1">
+					대리효버섯
+				</p>
+				<p class="mantext2">
+					주말에 엄마한테 전화좀 드려~ <br>
+					이런건 며느리가 하는거야
+				</p>
+			</div>
+		</a>
+
+		<a class="mainbox1" href="#">
+			<h1 style="color: #496015;">23</h1>
+			<img src="./img/ba23.png" class="manimg" id="a23">
+			<div class="mantextbox">
+				<p class="mantext1">
+					얼룩군버섯
+				</p>
+				<p class="mantext2">
+					이게 다 여자들이 군대를 안가서 그래. <br>
+					남자들은 나라지키느라 뼈빠지게 고생하는데! 여자도 다 군대 보내야해
+				</p>
+			</div>
+		</a>
+
+		<a class="mainbox1 under" href="#">
+			<h1 style="color: #081144;">24</h1>
+			<img src="./img/ba24.png" class="manimg" id="a24">
+			<div class="mantextbox">
+				<p class="mantext1">
+					형님버섯
+				</p>
+				<p class="mantext2">
+					형, 담배한대 피러 가실래요?
+				</p>
+			</div>
+		</a>
+	</section>
+<!-- 푸터 -->
+	<footer>
+		<div id="footerbox">
+			<div id="footerLogo">머스마룸</div>
+			<div id="footerLeft">
+				-<br>
+				Daeun Shin<br>
+				danee_e@naver.com<br>
+				insta_@ManSheroom
+			</div>
+			<div id="footerRight">
+				-<br>
+				한국에서 여성의 인권은 여전히 낮으며, 사회에는 여성에 대한 크고 작은 차별과 위협이 만연합니다. 이 프로젝트는 언어를 제공함으로써 여성이 자신이 처한 상황을 간결하고 명확하게 설명할 수 있도록 함과 동시에 자신의 상황을 자각할 수 있게 하고 남성에게 자신 혹은 자신의 주변인이 행하고 있는 것이 무엇인지 알게하고자 합니다.
+			</div>
+		</div>
+	</footer>
+
+	<script>
+	//탑버튼	
+		//Get the button:
+		mybutton = document.getElementById("myBtn");
+
+		// When the user scrolls down 20px from the top of the document, show the button
+		window.onscroll = function() {scrollFunction()};
+
+		function scrollFunction() {
+			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+		    mybutton.style.display = "block";
+			} else {
+			mybutton.style.display = "none";
+			}
+		}
+
+		// When the user clicks on the button,` scroll to the top of the document
+		function topFunction() {
+		  document.body.scrollTop = 0; // For Safari
+		  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+		}
+
+	//이미지 호버
+		var aa = document.getElementsByClassName("mainbox1");
+
+
+
+		for(var ii=0; ii<25; ii++){
+			
+			aa[ii].onmouseover = function(){	
+				var k = this.getElementsByClassName("manimg")[0].id;
+				this.getElementsByClassName("manimg")[0].src = "./img/a" + k + ".gif";
+				console.log("./img/a" + k + ".gif");
+			}
+
+			aa[ii].onmouseout = function(){
+				var k = this.getElementsByClassName("manimg")[0].id;
+				this.getElementsByClassName("manimg")[0].src = "./img/b" + k + ".png";
+				console.log("./img/b" + k + ".png");
+			}
+		}
+	</script>
+
+</body>
+</html>
