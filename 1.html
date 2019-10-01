@@ -10,7 +10,8 @@
 
 	<style>
 	/*폰트*/
-		h1{font-family: 'Roboto Condensed', sans-serif; font-size: 5em; line-height: 0; letter-spacing: -2px;}
+		h1{font-family: 'Roboto Condensed', sans-serif; font-size: 10em; line-height: 0; letter-spacing: -2px; margin-bottom: 30px; margin: 0; padding-top: 70px;}
+		h2{font-size: 5.1em; margin-bottom: 0;}
 		*{font-family: 'Noto Sans KR', sans-serif;}
 		html{font-family: 'Noto Sans KR', sans-serif;}
 	/*메뉴바*/
@@ -62,18 +63,85 @@
 		}
 	/*top button*/
 		#myBtn {
-		display: none; /* Hidden by default */
-		position: fixed; /* Fixed/sticky position */
-		bottom: 20px; /* Place the button at the bottom of the page */
-		right: 15px; /* Place the button 30px from the right */
-		z-index: 999; /* Make sure it does not overlap */
-		border: none; /* Remove borders */
-		outline: none; /* Remove outline */
-		cursor: pointer; /* Add a mouse pointer on hover */
+		display: none;
+		position: fixed;
+		bottom: 20px;
+		right: 15px;
+		z-index: 999;
+		border: none;
+		outline: none;
+		cursor: pointer;
 		background: none;
 		width: 70px;
 		}
 		#myBtn img{width: 100%;}
+
+	/*본문*/
+		
+		#mainbox{
+			position: relative; margin-top: 110px;
+			width: 1400px; left:calc(50% - 700px); 
+			overflow: auto;
+			padding-left: 10px;
+			padding-right: 10px;
+			margin-bottom: 200px;
+			padding-top: 0px;
+			background: pink;
+		}
+			#box1{
+				position: relative; 
+				background: red;
+				height: 750px;
+				margin-top: 0;
+			}
+				#tbox1-1{
+					color: #430084;
+					position: relative;
+					background: blue;
+					width: 500px;
+					z-index: 980;
+				}
+				#tbox1-2{
+					color: #474747;
+					position: absolute;
+					bottom: 0px;
+					background: purple;
+					width: 500px;
+					height: 160px;
+					font-size: 1.2em;
+					line-height: 35px;
+				}
+
+					#t1-2-top{
+						position: absolute;
+						left: 0;
+						background: blue;
+						margin-top: 0;
+					}
+					#t1-2-left{
+						position: absolute;
+						left: 0;
+						margin-top: 50px;
+						background: yellow;
+					}
+					#t1-2-right{
+						position: absolute;
+						right: 0;
+						margin-top: 50px;
+						width: 358px;
+						background: green;
+					}
+				#imgbox1{
+					position: absolute;
+					width: 800px;
+					left: calc(50% - 400px);
+					background: green;
+					top: 0;
+				}
+					#gif1{
+						margin: auto;
+						width: 108%;
+					}
 
 
 
@@ -128,14 +196,82 @@
 		<img id="arrow" src="./homeimg/arrowGray.png">
 	</button>
 	<script type="text/javascript">
-			var y= document.querySelector("#arrow")
+			
+	</script>
+
+<!-- 본문 -->	
+
+	<section id="mainbox">
+		<section id="box1">
+			<div id="tbox1-1">
+				<h1>01</h1>
+				<h2 style="-webkit-text-stroke:1px white;">어린로리버섯</h2>
+			</div>
+			<div id="tbox1-2">
+				<div id="t1-2-top">
+					불법적 성범죄과 아동청소년속 
+				</div>
+				<div id="t1-2-left">
+					| 식용가능 여부<br>
+					| 장소
+				</div>
+				<div id="t1-2-right">
+					독버섯이다<br>
+					놀이터, 유치원, 초등학교 등 <br>
+					어린아이가 많은 곳
+				</div>
+			</div>
+			<div id="imgbox1">
+				<img src="./alpha/bb01.gif" id="gif1">
+			</div>
+
+		</section>
+		
+	</section>
+<!-- 푸터 -->	
+	<footer>
+		<div id="footerbox">
+			<div id="footerLogo">머스마룸</div>
+			<div id="footerLeft">
+				-<br>
+				Daeun Shin<br>
+				danee_e@naver.com<br>
+				insta_@ManSheroom
+			</div>
+			<div id="footerRight">
+				-<br>
+				한국에서 여성의 인권은 여전히 낮으며, 사회에는 여성에 대한 크고 작은 차별과 위협이 만연합니다. 이 프로젝트는 언어를 제공함으로써 여성이 자신이 처한 상황을 간결하고 명확하게 설명할 수 있도록 함과 동시에 자신의 상황을 자각할 수 있게 하고 남성에게 자신 혹은 자신의 주변인이 행하고 있는 것이 무엇인지 알게하고자 합니다.
+			</div>
+		</div>
+	</footer>
+
+	<script>
+		//탑버튼	
+		mybutton = document.getElementById("myBtn");
+		window.onscroll = function() {scrollFunction()};
+
+		function scrollFunction() {
+			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+		    mybutton.style.display = "block";
+			} else {
+			mybutton.style.display = "none";
+			}
+		}
+
+		function topFunction() {
+		  document.body.scrollTop = 0;
+		  document.documentElement.scrollTop = 0;
+		}
+		
+	//top버튼 이미지 호버
+		var y= document.querySelector("#arrow")
 			y.onmouseover = function(e){
 				y.setAttribute("src","./homeimg/arrow.png")
 			}
 			y.onmouseleave = function(e){
 				y.setAttribute("src","./homeimg/arrowGray.png")
 			}
-		</script>
-<!-- 본문 -->	
+	</script>
+
 </body>
 </html>
