@@ -62,6 +62,18 @@
 			position: absolute;
 			left:calc(50% - 130px);
 		}
+	/*좌우 버튼*/
+		.button{
+			position: fixed;
+			top: 500px;
+			font-size: 5em;
+			text-decoration: none;
+			color: #efefef;
+			background: pink;
+		}
+			.left{left: 10px;}
+			.right{right: 10px;}
+
 	/*top button*/
 		#myBtn {
 		display: none;
@@ -320,17 +332,35 @@
 			width: 550px;
 			left: 120px;
 		}
-		#box3img{
+
+		#box3news{
 			position: absolute;
 			width: 640px;
 			right: 90px;
 			top: 19px;
-			border: 2px solid #430084; 
+			border: 2.5px solid #430084;
+			overflow: auto;
 		}
-		#box3img img{
+		#box3news img{
 			width: 100%;
 		}
-		#box3img:hover{opacity: 0.5;}
+		#box3news img:hover{opacity: 0.5;}
+
+		#box3news p{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			left: calc(50% - 320px);
+			top: 0;
+			margin: 0;
+			text-align: center;
+			font-size: 2.8em; font-weight: 700;
+			line-height: 670px;
+			color: black;
+			opacity: 0;
+			background: white;
+		}
+		#box3news p:hover{opacity: 0.5;}
 
 
 
@@ -339,7 +369,7 @@
 			background: #430084; 
 			color: #e2e2e2;
 			bottom: 0%;
-			height: 350px;
+			height: 380px;
 			position: relative;
 			width: 100%;
 			padding-top: 20px;
@@ -361,7 +391,7 @@
 				left: 10px;
 			}
 			#footerLeft{
-				position: absolute; width: 300px; left: 15px;
+				position: absolute; width: 350px; left: 15px;
 				margin-top: 100px;
 				line-height: 1.7em;
 			}
@@ -380,6 +410,9 @@
 		<li><a href="#">About</a></li>
 		<li><a id="logo">머스마룸</a></li>
 	</ul>
+<!-- 좌우버튼 -->	
+	<a class="button left "href="index.html"><i class="fas fa-chevron-left"></i></a>
+	<a class="button right"href="#"><i class="fas fa-chevron-right"></i></a>
 <!-- Top Button -->
 	<button onclick="topFunction()" id="myBtn" title="Go to top">
 		<img id="arrow" src="./homeimg/arrowGray.png">
@@ -461,8 +494,10 @@
 					벌써 20년도 더 지난 이야기에요. 저는 유치원생때 성폭행을 당했습니다. 집근처 미술학원에 다니고 있었는데, 그 학원은 학원 내에 화장실이 없는 곳 이었어요. 미술학원 바로 옆에있는 건물 화장실에 갔을 때 모르는 아저씨한테 성폭행을 당했어요. 당시 화장실 밖에 지나가던 아주머니 한분이 계셨는데 절 성폭행 한 남자가 자신이 제 아버지라고 말했고, 제가 아니라고 했지만 아주머니는 별다른 의심 없이 자리를 떠나셨죠. 20년이 넘도록 아무에게도 말도 못했어요. 자세하게 말하면 잊고싶은 기억이 떠오를 것 같아서 자세하게는 말 못하겠네요.
 				</p>
 			</div>
-			<a id="box3img" href="http://news.chosun.com/site/data/html_dir/2019/09/10/2019091000793.html" target="new">
+			
+			<a id="box3news" href="http://news.chosun.com/site/data/html_dir/2019/09/10/2019091000793.html" target="new">
 				<img src="./news/01news.png">
+				<p> 더 알아보기 </p>
 			</a>
 			
 		</section>
@@ -476,7 +511,9 @@
 				-<br>
 				Daeun Shin<br>
 				danee_e@naver.com<br>
-				insta_@ManSheroom
+				insta_@ManSheroom<br>
+				<br>		
+				Copyright 2019.ShinDaeun.All rights reserved.
 			</div>
 			<div id="footerRight">
 				-<br>
@@ -484,8 +521,9 @@
 			</div>
 		</div>
 	</footer>
-
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 	<script>
+
 		//탑버튼	
 		mybutton = document.getElementById("myBtn");
 		window.onscroll = function() {scrollFunction()};
