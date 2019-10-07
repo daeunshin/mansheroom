@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>05_오빠가버섯</title>
+	<link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.0/normalize.css">
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700i&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700,900&display=swap" rel="stylesheet">
+
+	<style>
+
+	/*폰트*/
+		h1{font-family: 'Roboto Condensed', sans-serif; font-size: 10em; line-height: 15px; letter-spacing: -2px; margin: 0; padding-top: 100px;}
+		h2{font-size: 5.1em; margin-bottom: 0;}
+		*{font-family: 'Noto Sans KR', sans-serif;}
+		html{font-family: 'Noto Sans KR', sans-serif;}
+	/*메뉴바*/
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding-left: 5px;
+			padding-top: 15px;
+			padding-bottom: 7px;
+			overflow: hidden;
+			background: white;
+			position: fixed;
+			width: 100%;
+			top: 0;
+			z-index: 990;
+			opacity: 0.85;
+		}
+		li {
+			float: left;
+		}
+		li a {
+			display: block;
+			color: black;
+			text-align:center;
+			padding:1px;
+			padding-bottom: 5px;
+			margin: 10px 18px;
+			text-decoration: none;
+			font-weight: 400;
+			font-size: 1.1em;
+		}
+		li a:hover:not(.active) {
+			border-bottom: 2px solid;
+			font-weight: 500;
+		}
+		li a.active {
+			border-bottom: 2px solid;
+			font-weight: 500;
+			color: black;
+		}
+		#logo{
+			-webkit-text-stroke:1.3px black; color: white;
+			font-size: 2.2em;
+			font-weight: 700;
+			width: 200px;
+			margin-top: 0;
+			position: absolute;
+			left:calc(50% - 130px);
+		}
+	/*좌우 버튼*/
+		.button{
+			position: fixed;
+			top: 500px;
+			font-size: 4.3em;
+			text-decoration: none;
+			color: grey;
+			z-index: 999;
+			opacity: 0.09;
+		}
+			.left{left: 10px;}
+			.right{right: 10px;}
+
+	/*top button*/
+		#myBtn {
+		display: none;
+		position: fixed;
+		bottom: 20px;
+		right: 15px;
+		z-index: 999;
+		border: none;
+		outline: none;
+		cursor: pointer;
+		background: none;
+		width: 70px;
+		}
+		#myBtn img{width: 100%;}
+
+	/*본문*/
+		
+		#mainbox{
+			position: relative; 
+			margin-top: 95px;
+			width: 1600px; left:calc(50% - 800px); 
+			margin-bottom: 300px;
+			padding-top: 0px;
+			overflow-x: hidden;
+		}
+			#box1{
+				position: relative; 
+				height: 1600px;
+				margin-top: 0;
+				width: 100%;
+
+			}
+				#tbox1-1{
+					color: #4c7275;
+					position: relative;
+					width: 550px;
+					z-index: 980;
+				}
+				#tbox1-2{
+					color: #474747;
+					position: relative;
+					top: 390px;
+					width: 530px;
+					height: 160px;
+					font-size: 1.2em;
+					line-height: 33px;
+					z-index: 980;
+					left: 10px;
+				}
+
+					#t1-2-top{
+						position: absolute;
+						left: 0;
+						margin-top: 0;
+						
+					}
+					#t1-2-left{
+						position: absolute;
+						left: 0;
+						margin-top: 50px;
+						
+					}
+					#t1-2-right{
+						position: absolute;
+						right: 0;
+						margin-top: 50px;
+						width: 358px;
+					}
+				#imgbox1{
+					position: absolute;
+					width: 1100px;
+					height: 1100px;
+					left: calc(50% - 530px);
+					top: 10px;
+					overflow: hidden;
+				}
+					#gif1{
+						position: absolute;
+						width: 1150px;
+						left: calc(50% - 575px);
+						z-index: 970;
+						top: -135px;
+					}
+					.circle1{
+						position: absolute;
+						margin: auto;
+					}
+						.c1{
+							background: #4c7275;
+							width: 800px;
+							height: 800px;
+							border-radius: 400px;
+							left: calc(50% - 380px);
+							z-index: 960;
+							top: 15px;
+						}
+						.c1blur{
+							background: #7cd3d6;
+							filter: blur(30px);
+							width: 780px;
+							height: 780px;
+							border-radius: 400px;
+							right: 60px;
+							opacity: 0.5;
+							top: 45px;
+						}
+
+			#box1-2{
+				position: relative; 
+				height: 300px;
+				text-align: right;
+				margin-right: 10px;
+				right: 20px;
+				top: 600px;
+			}
+			#box1-2 p {
+				position: absolute;
+				right: 0px;
+				color: #4c7275;
+				font-size: 4.3em;
+				font-weight: 700;
+				line-height: 120px;
+
+			}
+
+			#line1{
+				background: #4c7275;
+				position: absolute;
+				right: 0px;
+				height: 770px;
+				width: 3px;
+				top: 550px;
+
+			}
+			#linetext1{
+				position: absolute;
+				-webkit-transform: rotate(-90deg);
+  				transform: rotate(-90deg);
+  				width: 150px;
+  				right: -55px;
+  				top: 615px;
+  				text-align: right;
+			}
+
+		#box2{
+			position: relative;
+			width: 100%;
+			height: 1550px;
+		}
+			#imgbox2{
+				position: absolute;
+				height: 1000px;
+				width: 900px;
+				left: 10px;
+			}
+			#gif2{
+				position: absolute;
+				left: -100px;
+				height: 900px;
+				z-index: 970;
+			}
+			.circle2{
+				position: absolute;
+				margin: auto;
+			}
+				.c2{
+					background: #4c7275;
+					width: 700px;
+					height: 700px;
+					z-index: 960;
+					border-radius: 350px;
+					left: 35px;
+					top: 60px;
+				}
+				.c2blur{
+					background: #7cd3d6;
+					filter: blur(30px);
+					width: 700px;
+					height: 700px;
+					border-radius: 350px;
+					left: 110px;
+					top: 60px;
+					opacity: 0.5;
+				}
+
+			#box2t{
+				position: absolute;
+				right: 80px;
+				top: 70px;
+				width: 600px;
+				height: 600px;
+
+			}
+			.tbox2{
+				margin-top: 100px;
+				bottom: 0px;
+
+			}
+			.bold{
+				color: #4c7275;
+				font-weight: 700;
+				font-size: 1.4em;
+			}
+			.middle{
+				color: #474747;
+				font-weight: 600;
+				font-size: 1.2em;
+			}
+			.light{
+				color: #474747;
+				font-weight: 400;
+				line-height: 30px;
+				font-size: 1.1em;
+			}
+			.left{
+				margin-left: 13px;
+			}
+
+
+
+		#line2{
+			background: #4c7275;
+			position: absolute;
+			height: 690px;
+			width: 3px;
+			top: 625px;
+			left: 0px;
+
+			}
+		#linetext2{
+			position: absolute;
+			-webkit-transform: rotate(90deg);
+  			transform: rotate(90deg);
+  			width: 150px;
+  			left: -55px;
+  			top: 690px;
+  			text-align: left;
+			}
+		#box2-1{
+			position: relative; 
+			height: 200px;
+			left: 40px;
+			top: 1130px;
+			color: #4c7275;
+			font-size: 3.8em;
+			font-weight: 700;
+			line-height: 100px;
+			}
+
+		#box3{
+			position: relative;
+			height: 800px;
+			float: left;
+			width: 100%;
+		}
+
+		#box3t{
+			position: relative;
+			width: 550px;
+			left: 120px;
+		}
+
+		#box3news{
+			position: absolute;
+			width: 640px;
+			right: 90px;
+			top: 19px;
+			border: 2.5px solid #4c7275;
+			overflow: auto;
+		}
+		#box3news img{
+			width: 100%;
+		}
+		#box3news img:hover{opacity: 0.5;}
+
+		#box3news p{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			left: calc(50% - 320px);
+			top: 0;
+			margin: 0;
+			text-align: center;
+			font-size: 2.8em; font-weight: 700;
+			line-height: 670px;
+			color: black;
+			opacity: 0;
+			background: white;
+		}
+		#box3news p:hover{opacity: 0.5;}
+
+
+
+	/*푸터*/
+		footer {
+			background: #4c7275; 
+			color: #e2e2e2;
+			bottom: 0%;
+			height: 380px;
+			position: relative;
+			width: 100%;
+			padding-top: 20px;
+			margin-top: 100px;
+		}
+		#footerbox{
+			position: relative; 
+			width: 1350px; left:calc(50% - 675px);
+
+		}
+			
+			#footerLogo{
+				-webkit-text-stroke:1.3px white; color: #4c7275;
+				font-size: 2.2em;
+				font-weight: 700;
+				width: 200px; 
+				margin-top: 30px;
+				position: absolute;
+				left: 10px;
+			}
+			#footerLeft{
+				position: absolute; width: 350px; left: 15px;
+				margin-top: 100px;
+				line-height: 1.7em;
+			}
+			#footerRight{
+				position: absolute; width: 880px; right: 15px;
+				margin-top: 100px;
+				line-height: 1.7em;
+			}	
+	</style>
+</head>
+<body>
+<!-- 메뉴바 -->
+	<ul>
+		<li><a href="index.html">버섯도감</a></li>
+		<li><a class="active" href="#act">알아보기</a></li>
+		<li><a href="25.html">About</a></li>
+		<li><a id="logo">머스마룸</a></li>
+	</ul>
+<!-- 좌우버튼 -->	
+	<a class="button left "href="4.html"><i class="fas fa-chevron-left"></i></a>
+	<a class="button right"href="6.html"><i class="fas fa-chevron-right"></i></a>
+<!-- Top Button -->
+	<button onclick="topFunction()" id="myBtn" title="Go to top">
+		<img id="arrow" src="./homeimg/arrowGray.png">
+	</button>
+	<script type="text/javascript">
+			
+	</script>
+
+<!-- 본문 -->	
+
+	<section id="mainbox">
+		<section id="box1">
+			<div id="tbox1-1">
+				<h1>05</h1>
+				<h2 style="-webkit-text-stroke:1px white;">오빠가버섯</h2>
+			</div>
+			<div id="tbox1-2">
+				<div id="t1-2-top">
+					부도덕적 여성혐오과 맨스플레인속 
+				</div>
+				<div id="t1-2-left">
+					| 식용가능 여부<br>
+					<p style="font-size: 0.5em;"> </p>
+					| 장소
+				</div>
+				<div id="t1-2-right">
+					식용에 부적합하다<br>
+					<p style="font-size: 0.5em;"> </p>
+					대학교
+				</div>
+			</div>
+			<div id="imgbox1">
+				<img src="./alpha/bb01.gif" id="gif1">
+				<div class="circle1 c1"></div>
+				<div class="circle1 c1blur"></div>
+			</div>
+			<div id="box1-2">
+				<p>
+					“ 하은아 뭐해? 점심먹었어?&nbsp;&nbsp;&nbsp;<br>
+					오빠랑 같이 먹자~ 내가 사줄게 ”
+				</p>
+			</div>
+			<div id="line1"></div>
+			<div id="linetext1">05_오빠가버섯</div>
+		</section>
+		<section id="box2">
+			<div id="imgbox2">
+				<img src="./alpha/bb01.gif" id="gif2">
+				<div class="circle2 c2"></div>
+				<div class="circle2 c2blur"></div>
+			</div>
+			<div id="box2t">
+				<div class="tbox2">
+					<p class="bold">형태적 특징</p>
+					<p class="light left">
+						갓은 회색에서 붉은빛이 도는 회갈색이다. 갓의 표면에는 홈선이 있고 종 모양에서 끝이 벌어지는 형태로 가장자리가 갈라지기 쉽다. 밝은 흰색의 대는 섬유질이고, 속이 비어있다. 대는 작고 어린 식물 주위를 감으며 위쪽으로 자란다. 대의 안쪽은 검은색이다. 
+					</p>
+				</div>
+				<div class="tbox2">
+					<p class="bold">기타 특성</p>
+					<p class="light left">
+						주로 봄~늦봄까지 발견할 수 있지만, 늦여름~초가을에도 발견할 수 있다. 주변의 작고 어린 식물 주위를 에워싸며 성장하며 완전히 성장했거나 자실체보다 크기가 큰 식물 주변에서 성장하는 경우는 없다. 초기에는 독성이 거의 없지만 섭취 시 약간의 스트레스를 유발하며 시간이 지나면 독성이 강해지기도 한다. 유균 시기에는 버섯의 독성이 아주 미약해 적절한 환경을 조성할 경우 식물에 영향을 미치지 않으면서 주변 해충을 쫓아줘 식물의 성장에 도움이 된다는 의견이 있었으나 최근에는 이러한 방법의 효율이 높지 않으며 오빠가버섯이 빛을 차단하고 식물의 성장을 오히려 방해하며 스스로 할 수 있는 능력을 저해한다는 연구 결과가 다수라 조기에 제거하는 편이다.
+					</p>
+				</div>
+			</div>
+			<div id="line2"></div>
+			<div id="linetext2">복용사례</div>
+			<div id="box2-1">
+				“그 선배 일 년 내내 절 쫒아다니더니<br>
+				&nbsp;&nbsp;마지막엔 저보고 꽃뱀이래요.”
+			</div>
+		</section>
+
+		<section id="box3">
+			<div id="box3t">
+				<p class="bold">복용사례</p>
+				<p class="middle"> 김하은(21) | 복용장소 : 대학교</p>
+				<p class="light left">
+					대학교 1학년 때 복학한 선배가 계속해서 추근댔어요. 학과 선배고 해서 강하게 말도 못 하고 에둘러서 거절했는데 눈치 없이 계속 “오빠가 밥 사줄까?”라는 식으로 메신저를 통해 연락이 오고 모든 문장을 ‘오빠가~’로 시작하더라고요. 제일 짜증 나는 건 학과에 자기 멋대로 소문을 내는 거였어요. 자기가 나를 찍었다느니 거의 다 넘어왔다느니 부끄러워서 저런다느니 헛소문을 퍼트리는데 부끄러워서 피하는 게 아니고 부담스럽고 싫어서 피하는 거였거든요? 덕분에 일 년 내내 머리 엄청 아팠죠. 실컷 쫓아다니더니 안 되겠다 싶었는지 마지막에 포기하면서 또 자기 멋대로 말을 퍼트리더라고요. 저보고 꽃뱀이니 걸레니 온갖 말을 하고 다니면서 다시 보니 못생겼대요. 이러는 게 한두 번이 아니라 여자들이 다들 자기를 피하니 이번에도 신입생한테 가서 똑같은 짓을 하고 있더라고요. 웃음만 나오죠.
+
+				</p>
+			</div>
+			
+			<a id="box3news" href="https://www.insight.co.kr/newsRead.php?ArtNo=47196" target="new">
+				<img src="./news/05news.jpg">
+				<p> 더 알아보기 </p>
+			</a>
+			
+		</section>
+
+	</section>
+<!-- 푸터 -->	
+	<footer>
+		<div id="footerbox">
+			<div id="footerLogo">머스마룸</div>
+			<div id="footerLeft">
+				-<br>
+				Daeun Shin<br>
+				danee_e@naver.com<br>
+				insta_@ManSheroom<br>
+				<br>		
+				Copyright 2019.ShinDaeun.All rights reserved.
+			</div>
+			<div id="footerRight">
+				-<br>
+				한국에서 여성의 인권은 여전히 낮으며, 사회에는 여성에 대한 크고 작은 차별과 위협이 만연합니다. 이 프로젝트는 언어를 제공함으로써 여성이 자신이 처한 상황을 간결하고 명확하게 설명할 수 있도록 함과 동시에 자신의 상황을 자각할 수 있게 하고, 남성에게 자신 혹은 자신의 주변인이 행하고 있는 것이 무엇인지 알게하고자 합니다.
+			</div>
+		</div>
+	</footer>
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	<script>
+
+		//탑버튼	
+		mybutton = document.getElementById("myBtn");
+		window.onscroll = function() {scrollFunction()};
+
+		function scrollFunction() {
+			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+		    mybutton.style.display = "block";
+			} else {
+			mybutton.style.display = "none";
+			}
+		}
+
+		function topFunction() {
+		  document.body.scrollTop = 0;
+		  document.documentElement.scrollTop = 0;
+		}
+		
+	//top버튼 이미지 호버
+		var y= document.querySelector("#arrow")
+			y.onmouseover = function(e){
+				y.setAttribute("src","./homeimg/arrow.png")
+			}
+			y.onmouseleave = function(e){
+				y.setAttribute("src","./homeimg/arrowGray.png")
+			}
+	</script>
+
+</body>
+</html>
