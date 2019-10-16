@@ -62,18 +62,7 @@
 			position: absolute;
 			left:calc(50% - 130px);
 		}
-	/*좌우 버튼*/
-		.button{
-			position: fixed;
-			top: 500px;
-			font-size: 4.3em;
-			text-decoration: none;
-			color: grey;
-			z-index: 999;
-			opacity: 0.09;
-		}
-			.left{left: 10px;}
-			.right{right: 10px;}
+
 
 	/*top button*/
 		#myBtn {
@@ -115,34 +104,28 @@
 
 				}
 				#tbox1-2{
-					color: #474747;
 					position: relative;
 					top: 390px;
 					width: 530px;
 					height: 160px;
 					font-size: 1.2em;
-					line-height: 33px;
+					line-height: 35px;
 					z-index: 980;
 					left: 10px;
 				}
-
-					#t1-2-top{
-						position: absolute;
-						left: 0;
-						margin-top: 0;
-						
-					}
 					#t1-2-left{
 						position: absolute;
 						left: 0;
 						margin-top: 50px;
-						
+						color: #474747;
 					}
 					#t1-2-right{
 						position: absolute;
 						right: 0;
 						margin-top: 50px;
-						width: 358px;
+						width: 425px;
+						color:#430084;
+						font-weight: 500;
 					}
 				#imgbox1{
 					position: absolute;
@@ -411,9 +394,7 @@
 		<li><a href="about.html">About</a></li>
 		<li><a id="logo">머스마룸</a></li>
 	</ul>
-<!-- 좌우버튼 -->	
-	<a class="button left "href="24.html"><i class="fas fa-chevron-left"></i></a>
-	<a class="button right"href="2.html"><i class="fas fa-chevron-right"></i></a>
+
 <!-- Top Button -->
 	<button onclick="topFunction()" id="myBtn" title="Go to top">
 		<img id="arrow" src="./homeimg/arrowGray.png">
@@ -431,18 +412,15 @@
 				<h2 style="-webkit-text-stroke:1px white;">어린로리버섯</h2>
 			</div>
 			<div id="tbox1-2">
-				<div id="t1-2-top">
-					불법적 성범죄과 아동청소년속 
-				</div>
 				<div id="t1-2-left">
-					| 식용가능 여부<br>
-					<p style="font-size: 0.5em; "> </p>
-					| 장소
+					분류 <br>
+					식용여부<br>
+					장소
 				</div>
 				<div id="t1-2-right">
+					불법적 성범죄과 아동청소년속<br>
 					독버섯이다<br>
-					놀이터, 유치원, 초등학교 등 <br>
-					<p style="font-size: 0.5em; "> </p>
+					놀이터, 유치원, 초등학교 등
 					어린아이가 많은 곳
 				</div>
 			</div>

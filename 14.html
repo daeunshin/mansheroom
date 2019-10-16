@@ -62,18 +62,7 @@
 			position: absolute;
 			left:calc(50% - 130px);
 		}
-	/*좌우 버튼*/
-		.button{
-			position: fixed;
-			top: 500px;
-			font-size: 4.3em;
-			text-decoration: none;
-			color: grey;
-			z-index: 999;
-			opacity: 0.09;
-		}
-			.left{left: 10px;}
-			.right{right: 10px;}
+
 
 	/*top button*/
 		#myBtn {
@@ -414,9 +403,7 @@
 		<li><a href="about.html">About</a></li>
 		<li><a id="logo">머스마룸</a></li>
 	</ul>
-<!-- 좌우버튼 -->	
-	<a class="button left "href="13.html"><i class="fas fa-chevron-left"></i></a>
-	<a class="button right"href="15.html"><i class="fas fa-chevron-right"></i></a>
+
 <!-- Top Button -->
 	<button onclick="topFunction()" id="myBtn" title="Go to top">
 		<img id="arrow" src="./homeimg/arrowGray.png">
@@ -435,17 +422,16 @@
 			</div>
 			<div id="tbox1-2">
 				<div id="t1-2-top">
-					부도덕적 여성혐오과 외모지적속 
+					불법적 경범죄과 스토킹속 
 				</div>
 				<div id="t1-2-left">
-					| 식용가능 여부<br>
-					<p style="font-size: 0.5em;"> </p>
-					| 장소
+					분류<br>
+					식용여부<br>
+					장소
 				</div>
 				<div id="t1-2-right">
-					식용에 부적합하다<br>
-					<p style="font-size: 0.5em;"> </p>
-					학교, 카페, 길거리 등 인구가 많이 모이는 곳 <br>
+					독버섯이다<br>
+					주택가 근처, 우편함, 회사 등의 어두운곳 <br>
 					 
 					
 				</div>
@@ -456,13 +442,17 @@
 				<div class="circle1 c1blur"></div>
 			</div>
 			<div id="box1-2">
-				<p>
-					“ 우리과에선 아영이가 제일 예쁘지&nbsp;&nbsp;&nbsp;<br>
-					 세아는 예쁘긴 한데 성괴 티나ㅋㅋㅋ ”
+				<p style="
+				word-spacing: -2px;
+				letter-spacing: -1px;
+					line-height: 1.4;
+					padding-right: 40px;">
+					“우리과에선 아영이가 제일 예쁘지<br>
+					 세아는 예쁘긴 한데 성괴 티나”
 				</p>
 			</div>
 			<div id="line1"></div>
-			<div id="linetext1">14_노란평가버섯</div>
+			<div id="linetext1">15_노란평가버섯</div>
 		</section>
 		<section id="box2">
 			<div id="imgbox2">
@@ -473,7 +463,10 @@
 			<div id="box2t">
 				<div class="tbox2">
 					<p class="bold">형태적 특징</p>
-					<p class="light left">
+					<p class="light left" style="
+					word-break: keep-all;
+					text-indent: 0px;
+					word-spacing: -1px;">
 						주걱 모양의 갓은 밝은 노란색에서 오렌지색이다. 갓 표면에는 나이테 같은 무늬가 있는데 밝은색과 어두운색이 번갈아 가며 나온다. 어두운 무늬가 나오는 주기는 일정해서 각 색의 간격은 거의 정확한데, 버섯이 성장함에 따라 무늬는 점점 촘촘하고 세부적으로 변한다. 엷은 황갈색의 대는 편심형으로 갓의 끝이 말린 쪽에 붙어있다. 대에는 개나리색의 가로 줄무늬가 있는데 이 또한 갓의 무늬와 마찬가지로 일정한 간격으로 생긴다. 대는 성장하더라도 길이에 변화가 없으며, 가로 줄무늬가 점차 촘촘하게 변한다.
 
 					</p>
@@ -487,9 +480,9 @@
 			</div>
 			<div id="line2"></div>
 			<div id="linetext2">복용사례</div>
-			<div id="box2-1">
+			<div id="box2-1" style="text-indent: -50px;padding-left: 80px;">
 				“ 같은과 남자애들이 동기 여자애들을<br>
-				&nbsp;&nbsp;외모순으로 1등부터 순위를 매겼어요. ”
+				외모순으로 1등부터 순위를 매겼어요. ”
 			</div>
 		</section>
 
@@ -530,6 +523,8 @@
 	</footer>
 	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 	<script>
+
+		console.log(location.href);
 
 		//탑버튼	
 		mybutton = document.getElementById("myBtn");

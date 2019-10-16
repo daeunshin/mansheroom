@@ -62,18 +62,6 @@
 			position: absolute;
 			left:calc(50% - 130px);
 		}
-	/*좌우 버튼*/
-		.button{
-			position: fixed;
-			top: 500px;
-			font-size: 4.3em;
-			text-decoration: none;
-			color: grey;
-			z-index: 999;
-			opacity: 0.09;
-		}
-			.left{left: 10px;}
-			.right{right: 10px;}
 
 	/*top button*/
 		#myBtn {
@@ -141,7 +129,8 @@
 						position: absolute;
 						right: 0;
 						margin-top: 50px;
-						width: 358px;
+						width: 425px;
+						font-weight: 500;
 					}
 				#imgbox1{
 					position: absolute;
@@ -413,9 +402,7 @@
 		<li><a href="about.html">About</a></li>
 		<li><a id="logo">머스마룸</a></li>
 	</ul>
-<!-- 좌우버튼 -->	
-	<a class="button left "href="1.html"><i class="fas fa-chevron-left"></i></a>
-	<a class="button right"href="3.html"><i class="fas fa-chevron-right"></i></a>
+
 <!-- Top Button -->
 	<button onclick="topFunction()" id="myBtn" title="Go to top">
 		<img id="arrow" src="./homeimg/arrowGray.png">
@@ -433,17 +420,14 @@
 				<h2 style="-webkit-text-stroke:1px white;">페미사이드버섯</h2>
 			</div>
 			<div id="tbox1-2">
-				<div id="t1-2-top">
-					불법적 살인죄과 강간치사속 
-				</div>
 				<div id="t1-2-left">
-					| 식용가능 여부<br>
-					<p style="font-size: 0.5em; "> </p>
-					| 장소
+					분류<br>
+					식용여부<br>
+					장소
 				</div>
 				<div id="t1-2-right">
+					불법적 살인죄과 강간치사속<br>
 					독버섯이다<br>
-					<p style="font-size: 0.5em;"> </p>
 					어둡고 구석진곳 위주로 발생하지만 <br>사람이 많고 밝은곳에도 자생한다 
 				</div>
 			</div>
