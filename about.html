@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>15_납작스토킹버섯</title>
+	<link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.0/normalize.css">
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700i&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700,900&display=swap" rel="stylesheet">
+
+	<style>
+
+	/*폰트*/
+		h1{font-family: 'Roboto Condensed', sans-serif; font-size: 10em; line-height: 15px; letter-spacing: -2px; margin: 0; padding-top: 100px;}
+		h2{font-size: 5.1em; margin-bottom: 0;}
+		*{font-family: 'Noto Sans KR', sans-serif;}
+		html{font-family: 'Noto Sans KR', sans-serif;}
+	/*메뉴바*/
+		.menuback{
+			list-style-type: none;
+			margin: 0;
+			background: linear-gradient(to top, rgba(255,255,255,0), rgba(255,255,255,0.9) 35%);
+			position: fixed;
+			width: 100%;
+			top: 0;
+			z-index: 990;
+			height:70px; 
+		}
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding-left: 5px;
+			padding-top: 15px;
+			padding-bottom: 7px;
+			overflow: hidden;
+			background: none;
+			position: fixed;
+			width: 100%;
+			top: 0;
+			z-index: 990;
+			opacity: 1;
+		}
+		li {
+			float: left;
+		}
+		li a {
+			display: block;
+			color: black;
+			text-align:center;
+			padding:1px;
+			padding-bottom: 5px;
+			margin: 10px 18px;
+			text-decoration: none;
+			font-weight: 400;
+			font-size: 1.1em;
+		}
+		li a:hover:not(.active) {
+			border-bottom: 2px solid;
+			font-weight: 500;
+		}
+		li a.active {
+			border-bottom: 2px solid;
+			font-weight: 500;
+			color: black;
+		}
+		#logo{
+			-webkit-text-stroke:1.3px black; color: white;
+			font-size: 2.2em;
+			font-weight: 700;
+			width: 200px;
+			margin-top: 0;
+			position: absolute;
+			left:calc(50% - 130px);
+		}
+		
+
+	/*top button*/
+		#myBtn {
+		display: none;
+		position: fixed;
+		bottom: 20px;
+		right: 15px;
+		z-index: 999;
+		border: none;
+		outline: none;
+		cursor: pointer;
+		background: none;
+		width: 70px;
+		}
+		#myBtn img{width: 100%;}
+
+	/*본문*/
+		#profile{
+			position: relative;
+			top: 110px;
+			width: 1600px; left:calc(50% - 800px); 
+			margin-bottom: 300px; 
+			padding-top: 0px;
+			height: 1000px;
+		 }
+
+		 .c1{
+		 	position: absolute;
+		 	width: 750px;
+		 	height: 750px;
+		 	padding-top: 0px;
+		 	border: 3.2px solid #430085;
+		 	border-radius: 400px;
+		 	overflow: hidden;
+		 	z-index: 900;
+		 }
+		 .c1 img { width: 100%; top: 0;}
+
+		 .c1blur{
+		 	position: absolute;
+		 	width: 740px;
+		 	height: 740px;
+		 	border-radius: 700px;
+		 	filter: blur(35px);
+		 	background: #9943ff;
+		 	top: 10px;
+		 	left: 50px;
+		 	opacity: 0.9
+		 }
+
+		 #phdtbox{
+		 	position: absolute;
+		 	right: 0;
+		 	width: 800px;
+		 }
+		 	.top{
+		 		position: absolute;
+		 		font-weight: 900;
+		 		font-size: 7em;
+		 		letter-spacing: -2px;
+		 		color: #5100af;
+		 		top: -130px;
+		 	}
+		 	.left{
+		 		position: absolute;
+		 		font-weight: 700;
+		 		font-size: 3.1em;
+		 		word-spacing: -8px;
+		 		color: #5100af;
+		 		top: 565px;
+		 		left: 0;
+		 	}
+		 	.right{
+		 		text-indent: -10px;
+		 		position: absolute;
+		 		font-weight: 500;
+		 		font-size: 1em;
+		 		letter-spacing: -1px;
+		 		color: #5100af;
+		 		top: 610px;
+		 		right: 35px;
+		 		line-height: 25px;
+		 	}
+
+		 #about{
+		 	position: relative;
+		 	width: 1600px;
+		 	background: pink;
+		 	left:calc(50% - 800px); 
+		 }
+
+		 	#tbox{
+		 		position: relative;
+		 		width: 750px;
+		 		background: red;
+		 	}
+		 	#imgbox{
+		 		position: absolute;
+		 		right: 0;
+		 		width: 500px;
+		 	}
+		 	.title{
+		 		color: #5100af;
+		 	}
+		 	.semititle{
+		 		color: #5100af;
+		 	}
+		 
+
+	/*푸터*/
+		footer {
+			background: #5100af; 
+			color: #e2e2e2;
+			bottom: 0%;
+			height: 380px;
+			position: relative;
+			width: 100%;
+			padding-top: 20px;
+			margin-top: 100px;
+		}
+		#footerbox{
+			position: relative; 
+			width: 1350px; left:calc(50% - 675px);
+
+		}
+			
+			#footerLogo{
+				-webkit-text-stroke:1.3px white; 
+				color: #5100af;
+				font-size: 2.2em;
+				font-weight: 700;
+				width: 200px; 
+				margin-top: 30px;
+				position: absolute;
+				left: 10px;
+			}
+			#footerLeft{
+				position: absolute; width: 350px; left: 15px;
+				margin-top: 100px;
+				line-height: 1.7em;
+			}
+			#footerRight{
+				position: absolute; width: 880px; right: 15px;
+				margin-top: 100px;
+				line-height: 1.7em;
+			}	
+	</style>
+</head>
+<body>
+<!-- 메뉴바 -->
+	<div class="menuback">&nbsp;</div>
+	<ul>
+		<li><a href="index.html">버섯도감</a></li>
+		<li><a href="#act">알아보기</a></li>
+		<li><a class="active" href="about.html">About</a></li>
+		<li><a id="logo">머스마룸</a></li>
+	</ul>
+
+<!-- Top Button -->
+	<button onclick="topFunction()" id="myBtn" title="Go to top">
+		<img id="arrow" src="./homeimg/arrowGray.png">
+	</button>
+	<script type="text/javascript">
+			
+	</script>
+
+<!-- 본문 -->	
+	<section id="profile">
+		<div class="c1">
+		<img src="./etc/phd.png">
+		</div>
+		<div class="c1blur"></div>
+
+		<div id="phdtbox">
+			<p class="top">ManSheroom<br>Laboratory</p>
+			<p class="left">Shin Daeun<br>Ph.D.in Mushroom Art</p>
+			<p class="right">
+				「머스마룸」저자<br>
+				한국 버섯 안전협회 회장<br>
+				영국 MIK 버섯공학과 겸임교수<br>
+				세계 독버섯 협회 한국 지부장
+			</p>
+		</div>
+	</section>
+	<section id="about">
+		<div id="tbox">
+			<p class="title">머스마룸이란</p>
+			<p>이 프로젝트는 사회를 풍자하고 현실을 고발함과 동시에 개념을 정의하고 언어를 제공하는 작업입니다.
+
+			‘여성 상위시대’라는 말이 나오는 시대에 속에서 여성은 여전히 수많은 부조리와 모순을 겪고 있습니다.
+			여성에게 젠더 권력에 기반한 희롱과 폭력, 차별은 남 일이 현실입니다. 이러한 상황 속 가장 모순적인 일은 피해 여성이 자신에게서 피해 원인을 찾고 사회는 여성에게 조심할 것을 요구하며 피해 여성에게 침묵하고 함구할 것을 강요한다는 것입니다. 또한 이미 여성 혐오가 일상이 되었기 때문에 대다수의 여성은 차별을 당했을 때 불편함을 느끼지만, 정확한 원인이나 이유 등을 알지 못하고 그렇기에 적절한 대응을 하지 못하며, 심지어 불편함조차 알지 못하는 여성이 많습니다.</p>
+
+			<p class="semititle">피해자는 피해자일 뿐이다.</p>
+
+			<p>물건을 도둑맞았을 때 원인은 도둑에게 있으니 “피해자가 피해를 당할 만했다.”고 비난하지 않으며 피해자는 자신이 도둑질당한 사실을 부끄러워하지 않습니다. 하지만 성폭행을 당했을 때 사회는 피해자를 탓하고 피해자에게 숨길 것을 요구하며, 피해자는 자신의 피해사실을 부끄러워합니다. 성폭행 사실은 피해자에게 “흠"이 되기 때문입니다. 똑같은 피해자이지만 이들은 같은 취급을 받지 못합니다. 피해자에게 부끄러워하지 말라고 할 것이 아니라 피해자가 부끄러워하지 않도록 인식을 바꾸는 것이 필요합니다.</p>
+
+			언어를 제공함으로써 여성에게 자신이 처한 상황을 인지하게 함과 동시에 자신이 겪은 일을 간결하고 명확하게 설명할 수 있도록 하고, 남성에게는 자신 혹은 주변인이 행하고 있는 일이 무엇인지 자각하게 하고자 합니다.
+
+		</div>
+
+		<div id="imgbox">
+			<img src="">
+		</div>
+	</section>
+<!-- 푸터 -->	
+	<footer>
+		<div id="footerbox">
+			<div id="footerLogo">머스마룸</div>
+			<div id="footerLeft">
+				-<br>
+				Daeun Shin<br>
+				danee_e@naver.com<br>
+				insta_@ManSheroom<br>
+				<br>		
+				Copyright 2019.ShinDaeun.All rights reserved.
+			</div>
+			<div id="footerRight">
+				-<br>
+				한국에서 여성의 인권은 여전히 낮으며, 사회에는 여성에 대한 크고 작은 차별과 위협이 만연합니다. 이 프로젝트는 언어를 제공함으로써 여성이 자신이 처한 상황을 간결하고 명확하게 설명할 수 있도록 함과 동시에 자신의 상황을 자각할 수 있게 하고, 남성에게 자신 혹은 자신의 주변인이 행하고 있는 것이 무엇인지 알게하고자 합니다.
+			</div>
+		</div>
+	</footer>
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	<script>
+
+		console.log(location.href);
+
+		//탑버튼	
+		mybutton = document.getElementById("myBtn");
+		window.onscroll = function() {scrollFunction()};
+
+		function scrollFunction() {
+			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+		    mybutton.style.display = "block";
+			} else {
+			mybutton.style.display = "none";
+			}
+		}
+
+		function topFunction() {
+		  document.body.scrollTop = 0;
+		  document.documentElement.scrollTop = 0;
+		}
+		
+	//top버튼 이미지 호버
+		var y= document.querySelector("#arrow")
+			y.onmouseover = function(e){
+				y.setAttribute("src","./homeimg/arrow.png")
+			}
+			y.onmouseleave = function(e){
+				y.setAttribute("src","./homeimg/arrowGray.png")
+			}
+	</script>
+
+</body>
+</html>
