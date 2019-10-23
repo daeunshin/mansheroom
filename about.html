@@ -5,9 +5,9 @@
 	<title>About ManSheroom</title>
 	<link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.0/normalize.css">
 
-	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700i&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700,700i&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700,900&display=swap" rel="stylesheet">
-
+	<link href="https://fonts.googleapis.com/css?family=Roboto:700,900&display=swap" rel="stylesheet">
 	<style>
 
 	/*폰트*/
@@ -74,7 +74,7 @@
 		}
 		
 
-	/*top button*/
+/*top button*/
 		#myBtn {
 		display: none;
 		position: fixed;
@@ -89,7 +89,7 @@
 		}
 		#myBtn img{width: 100%;}
 
-	/*본문*/
+/*본문*/
 		#profile{
 			position: relative;
 			top: 110px;
@@ -101,13 +101,14 @@
 
 		 .c1{
 		 	position: absolute;
-		 	width: 750px;
-		 	height: 750px;
+		 	width: 755px;
+		 	height: 755px;
 		 	padding-top: 0px;
 		 	border: 3.2px solid #430085;
 		 	border-radius: 400px;
 		 	overflow: hidden;
 		 	z-index: 900;
+		 	top: 45px;
 		 }
 		 .c1 img { width: 100%; top: 0;}
 
@@ -118,7 +119,7 @@
 		 	border-radius: 700px;
 		 	filter: blur(35px);
 		 	background: #9943ff;
-		 	top: 10px;
+		 	top: 55px;
 		 	left: 70px;
 		 	opacity: 0.8
 		 }
@@ -127,23 +128,28 @@
 		 	position: absolute;
 		 	right: 0;
 		 	width: 800px;
+		 	top: 45px;
 		 }
 		 	.top{
 		 		position: absolute;
 		 		font-weight: 900;
-		 		font-size: 7em;
-		 		letter-spacing: -2px;
+		 		font-size: 8em;
+		 		letter-spacing: -1px;
 		 		color: #5100af;
-		 		top: -130px;
+		 		top: -120px;
+		 		left: -10px;
+		 		font-family: 'Roboto', sans-serif;
+
 		 	}
 		 	.left{
 		 		position: absolute;
 		 		font-weight: 700;
 		 		font-size: 3.1em;
-		 		word-spacing: -8px;
+		 		word-spacing: -5px;
 		 		color: #5100af;
-		 		top: 565px;
-		 		left: 0;
+		 		top: 575px;
+		 		left: 10px;
+		 		font-family: 'Roboto', sans-serif;		 		
 		 	}
 		 	.right{
 		 		text-indent: -10px;
@@ -152,9 +158,9 @@
 		 		font-size: 1em;
 		 		letter-spacing: -1px;
 		 		color: #5100af;
-		 		top: 610px;
+		 		top: 622px;
 		 		right: 35px;
-		 		line-height: 25px;
+		 		line-height: 26px;
 		 	}
 
 		 #about{
@@ -174,7 +180,7 @@
 		 		position: absolute;
 		 		right: 110px;
 		 		width: 680px;
-		 		top: -70px;
+		 		top: -80px;
 		 		overflow: hidden;
 		 	}
 		 		#imgbox img{
@@ -183,7 +189,7 @@
 		 	
 		 	.title{
 		 		color: #5100af;
-		 		font-size: 3.6em;
+		 		font-size: 3.8em;
 		 		font-weight: 700;
 		 		letter-spacing: -1px;
 		 	}
@@ -202,7 +208,7 @@
 		 	}
 		 
 
-	/*푸터*/
+/*푸터*/
 		footer {
 			background: #5100af; 
 			color: #e2e2e2;
@@ -220,7 +226,7 @@
 		}
 			
 			#footerLogo{
-				-webkit-text-stroke:1.3px white; 
+				-webkit-text-stroke:0.7px white; 
 				color: #5100af;
 				font-size: 2.2em;
 				font-weight: 700;
@@ -269,13 +275,14 @@
 <!-- 본문 -->	
 	<section id="profile">
 		<div class="c1">
-		<img src="./etc/phd.png">
+			<img src="./etc/phd.png">
 		</div>
-		<div class="c1blur"></div>
-
+		<div class="c1blur">&nbsp;</div>
 		<div id="phdtbox">
 			<p class="top">ManSheroom<br>Laboratory</p>
-			<p class="left">Shin Daeun<br>Ph.D.in Mushroom Art</p>
+			<p class="left">
+				<span style="letter-spacing: -2px;">Shin Daeun<br>
+				Ph.D.in Mushroom </span>Art</p>
 			<p class="right">
 				「머스마룸」저자<br>
 				한국 버섯 안전협회 회장<br>
@@ -289,7 +296,7 @@
 			<p class="title">머스마룸이란</p>
 			<p class="body">이 프로젝트는 사회를 풍자하고 현실을 고발함과 동시에 개념을 정의하고 언어를 제공하는 작업입니다.
 			<br><br>
-			‘여성 상위시대’라는 말이 나오는 시대에 속에서 여성은 여전히 수많은 부조리와 모순을 겪고 있습니다.
+			‘여성 상위시대’라는 말이 나오는 시대에 속에서 여성은 여전히 수많은 부조리와 모순을 겪고 있습니다.<br>
 			여성에게 젠더 권력에 기반한 희롱과 폭력, 차별은 남 일이 현실입니다. 이러한 상황 속 가장 모순적인 일은 피해 여성이 자신에게서 피해 원인을 찾고 사회는 여성에게 조심할 것을 요구하며 피해 여성에게 침묵하고 함구할 것을 강요한다는 것입니다. 또한 이미 여성 혐오가 일상이 되었기 때문에 대다수의 여성은 차별을 당했을 때 불편함을 느끼지만, 정확한 원인이나 이유 등을 알지 못하고 그렇기에 적절한 대응을 하지 못하며, 심지어 불편함조차 알지 못하는 여성이 많습니다.</p>
 
 			<p class="semititle">피해자는 피해자일 뿐이다</p>
