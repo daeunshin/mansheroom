@@ -356,7 +356,22 @@
 		}
 		#box3news p:hover{opacity: 0.5;}
 
-
+/*네비게이터*/
+	.navibox{
+		position: relative;
+		width: 1600px; left:calc(50% - 800px);
+		height: 700px;
+		background: pink;
+	}
+	.manimg{
+		position: relative;
+		float: left;
+		width: 170px;
+		margin: 15px;
+	}
+	.opa0{opacity:0.7;}
+		.opa0 :hover{opacity: 1;}
+	.opa1{opacity: 1;}
 
 	/*푸터*/
 		footer {
@@ -497,10 +512,35 @@
 			<a id="box3news" href="https://news.joins.com/article/23605607#none">
 				<img src="./news/24news.png">
 				<p> 더 알아보기 </p>
-			</a>
-			
+			</a>				
 		</section>
-
+	</section>
+<!-- 네비게이터 -->
+	<section class="navibox">
+		<img src="./img/ba01.png" class="manimg opa0" id="a01">
+		<img src="./img/ba02.png" class="manimg opa0" id="a02">
+		<img src="./img/ba03.png" class="manimg opa0" id="a03">
+		<img src="./img/ba04.png" class="manimg opa0" id="a04">
+		<img src="./img/ba05.png" class="manimg opa0" id="a05">
+		<img src="./img/ba06.png" class="manimg opa0" id="a06">
+		<img src="./img/ba07.png" class="manimg opa0" id="a07">
+		<img src="./img/ba08.png" class="manimg opa0" id="a08">
+		<img src="./img/ba09.png" class="manimg opa0" id="a09">
+		<img src="./img/ba10.png" class="manimg opa0" id="a10">
+		<img src="./img/ba11.png" class="manimg opa0" id="a11">
+		<img src="./img/ba12.png" class="manimg opa0" id="a12">
+		<img src="./img/ba13.png" class="manimg opa0" id="a13">
+		<img src="./img/ba14.png" class="manimg opa0" id="a14">
+		<img src="./img/ba15.png" class="manimg opa0" id="a15">
+		<img src="./img/ba16.png" class="manimg opa0" id="a16">
+		<img src="./img/ba17.png" class="manimg opa0" id="a17">
+		<img src="./img/ba18.png" class="manimg opa0" id="a18">
+		<img src="./img/ba19.png" class="manimg opa0" id="a19">
+		<img src="./img/ba20.png" class="manimg opa0" id="a20">
+		<img src="./img/ba21.png" class="manimg opa0" id="a21">
+		<img src="./img/ba22.png" class="manimg opa0" id="a22">
+		<img src="./img/ba23.png" class="manimg opa0" id="a23">
+		<img src="./img/ba24.png" class="manimg opa1" id="a24">
 	</section>
 <!-- 푸터 -->	
 	<footer>
@@ -521,6 +561,8 @@
 			</div>
 		</div>
 	</footer>
+	
+<!-- 스크립트 -->	
 	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 	<script>
 
@@ -551,6 +593,24 @@
 			y.onmouseleave = function(e){
 				y.setAttribute("src","./homeimg/arrowGray.png")
 			}
+	
+	//이미지 호버
+		var aa = document.getElementsByClassName("navibox");
+
+		for(var ii=0; ii<25; ii++){
+			
+			aa[ii].onmouseover = function(){	
+				var k = this.getElementsByClassName("manimg")[0].id;
+				this.getElementsByClassName("manimg")[0].src = "./img/a" + k + ".gif";
+				console.log("./img/a" + k + ".gif");
+			}
+
+			aa[ii].onmouseout = function(){
+				var k = this.getElementsByClassName("manimg")[0].id;
+				this.getElementsByClassName("manimg")[0].src = "./img/b" + k + ".png";
+				console.log("./img/b" + k + ".png");
+			}
+		}
 	</script>
 
 </body>
