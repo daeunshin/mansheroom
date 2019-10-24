@@ -14,6 +14,17 @@
 		*{font-family: 'Noto Sans KR', sans-serif;}
 		html{font-family: 'Noto Sans KR', sans-serif;}
 /*메뉴바*/
+		.menuback{
+			list-style-type: none;
+			margin: 0;
+			background: white;
+			position: fixed;
+			width: 100%;
+			top: 0;
+			z-index: 990;
+			height:70px; 
+			opacity: 0.7;
+		}
 		ul {
 			list-style-type: none;
 			margin: 0;
@@ -21,12 +32,12 @@
 			padding-top: 15px;
 			padding-bottom: 7px;
 			overflow: hidden;
-			background: white;
+			background: none;
 			position: fixed;
 			width: 100%;
 			top: 0;
 			z-index: 990;
-			opacity: 0.85;
+			opacity: 1;
 		}
 		li {
 			float: left;
@@ -164,6 +175,7 @@
 		
 	</header>
 <!-- 메뉴바 -->
+	<div class="menuback">&nbsp;</div>
 	<ul>
 		<li><a class="active" href="#">버섯도감</a></li>
 		<li><a href="1.html">알아보기</a></li>
