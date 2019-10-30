@@ -369,18 +369,34 @@
 	/*네비게이터*/
 	#navibox{
 		position: relative;
-		width: 1600px; left:calc(50% - 800px);
+		width: 1400px; left:calc(50% - 700px);
 		height: 700px;
-		padding-bottom: 200px;
+		padding-bottom: 100px;
+
+	}
+	#go{
+		position: relative;
+		font-size: 1.5em;
+		color: #474747;
+		left: 8px;
+		font-weight: 500;
+		top: 12px;
+		padding-bottom: 10px; 
 	}
 	.manimg{
 		position: relative;
 		float: left;
-		width: 170px;
-		margin: 15px;
+		width: 163px;
+		margin: 6px;
 	}
-	.opa0{opacity:0.8;}
-	.opa1{opacity: 1;}
+	.manimgact{
+		position: relative;
+		float: left;
+		width: 163px;
+		margin: 6px;
+	}
+	.opa0{filter: brightness(80%);}
+	.opa1{filter: brightness(100%);}
 
 	/*푸터*/
 		footer {
@@ -527,6 +543,7 @@
 	</section>
 <!-- 네비게이터 -->
 	<section id="navibox">
+		<div id="go"><p>바로가기<i class="far">&nbsp; &#xf0a4;</i></p></div>
 		<a href="1.html"><img src="./img/ba01.png" class="manimg opa0" id="a01"></a>
 		<a href="2.html"><img src="./img/ba02.png" class="manimg opa0" id="a02"></a>
 		<a href="3.html"><img src="./img/ba03.png" class="manimg opa0" id="a03"></a>
@@ -535,7 +552,7 @@
 		<a href="6.html"><img src="./img/ba06.png" class="manimg opa0" id="a06"></a>
 		<a href="7.html"><img src="./img/ba07.png" class="manimg opa0" id="a07"></a>
 		<a href="8.html"><img src="./img/ba08.png" class="manimg opa0" id="a08"></a>
-		<a href="#"><img src="./img/ba09.png" class="manimg opa1" id="a09"></a>
+		<img src="./img/aa09.gif" class="manimgact opa1" id="a09">
 		<a href="10.html"><img src="./img/ba10.png" class="manimg opa0" id="a10"></a>
 		<a href="11.html"><img src="./img/ba11.png" class="manimg opa0" id="a11"></a>
 		<a href="12.html"><img src="./img/ba12.png" class="manimg opa0" id="a12"></a>
@@ -608,16 +625,16 @@
 			
 			tt[ii].onmouseover = function(){	
 				var k = this.id;
-				this.style.opacity = "1";
+				this.style.filter = "brightness(100%)";
 				this.src = "./img/a" + k + ".gif";
 				console.log("./img/a" + k + ".gif");
 			}
 
 			tt[ii].onmouseout = function(){
 				var k = this.id;
+				this.style.filter = "brightness(80%)";
 				this.src = "./img/b" + k + ".png";
 				console.log("./img/b" + k + ".png");
-				this.style.opacity = "0.8";
 			}
 		}
 	</script>
